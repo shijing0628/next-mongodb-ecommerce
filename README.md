@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Build a E-commerce Full Stack with Nextjs + Mongodb + React Hook + Bootstrap 4
+### Build a E-commerce Full Stack with Nextjs + Mongodb + React Hook + Bootstrap 4
+
+### use redux for register/login info notify
 
 ## Getting Started
 
