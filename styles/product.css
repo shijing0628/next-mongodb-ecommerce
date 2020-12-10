@@ -31,3 +31,10 @@
   -webkit-line-clamp: 3;
   color: #444;
 }
+
+/* Detail product */
+
+.detail_page .img-thumbnail.active {
+  border-color: tomato;
+  padding: 2px;
+}
