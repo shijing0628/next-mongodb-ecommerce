@@ -7,8 +7,12 @@
 
 .products .card {
   margin: 10px auto;
+  transition: all 0.5s;
+  box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.3);
 }
-
+.products .card:hover {
+  transform: scale(1.1);
+}
 .products .card-img-top {
   height: 250px;
   width: 100%;
