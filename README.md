@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### use redux for register/login info notify
 
+### product data is saved at data.txt, can be import to mongodb
+
 ## Getting Started
 
 First, run the development server:
