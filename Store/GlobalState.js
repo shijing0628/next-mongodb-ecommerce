@@ -10,6 +10,7 @@ export const DataProvider = ({ children }) => {
  const [state, dispatch] = useReducer(reducers, initialState)
  const { cart } = state
 
+ //save firstlogin token to localstorage
  useEffect(() => {
   const firstLogin = localStorage.getItem("firstLogin")
   if (firstLogin) {
@@ -27,6 +28,7 @@ export const DataProvider = ({ children }) => {
   }
  }, [])
 
+ // after 'addtocart', save product to localstorage
  useEffect(() => {
   const __next_cart01_devat = JSON.parse(localStorage.getItem('__next_cart01_devat'))
   if (__next_cart01_devat)
