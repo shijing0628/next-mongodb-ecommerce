@@ -44,3 +44,6 @@ Product detail page
 Sign in / Register
 
 ![](2020-12-10-15-22-29.png)
+
+cart
+![](2020-12-11-11-58-40.png)
