@@ -4,7 +4,11 @@
   justify-content: center;
   margin: 20px 0;
 }
-
+.detail_page {
+  background: url("./images/bg3.png") no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
 .products .card {
   margin: 10px auto;
   transition: all 0.5s;
