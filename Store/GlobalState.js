@@ -6,45 +6,45 @@ import reducers from './Reducers'
 export const DataContext = createContext()
 
 export const DataProvider = ({ children }) => {
- const initialState = { notify: {}, auth: {}, cart: [] }
- const [state, dispatch] = useReducer(reducers, initialState)
- const { cart } = state
+  const initialState = { notify: {}, auth: {}, cart: [], modal: {} }
+  const [state, dispatch] = useReducer(reducers, initialState)
+  const { cart } = state
 
- //save firstlogin token to localstorage
- useEffect(() => {
-  const firstLogin = localStorage.getItem("firstLogin")
-  if (firstLogin) {
-   getData('auth/accessToken').then(res => {
-    if (res.err) return localStorage.removeItem("firstLogin")
+  //save firstlogin token to localstorage
+  useEffect(() => {
+    const firstLogin = localStorage.getItem("firstLogin")
+    if (firstLogin) {
+      getData('auth/accessToken').then(res => {
+        if (res.err) return localStorage.removeItem("firstLogin")
 
-    dispatch({
-     type: "AUTH",
-     payload: {
-      token: res.access_token,
-      user: res.user
-     }
-    })
-   })
-  }
- }, [])
+        dispatch({
+          type: "AUTH",
+          payload: {
+            token: res.access_token,
+            user: res.user
+          }
+        })
+      })
+    }
+  }, [])
 
- // after 'addtocart', save product to localstorage
- useEffect(() => {
-  const __next_cart01_devat = JSON.parse(localStorage.getItem('__next_cart01_devat'))
-  if (__next_cart01_devat)
-   dispatch({ type: 'ADD_CART', payload: __next_cart01_devat })
- }, [])
-
-
- useEffect(() => {
-  localStorage.setItem('__next_cart01_devat', JSON.stringify(cart))
- }, [cart])
+  // after 'addtocart', save product to localstorage
+  useEffect(() => {
+    const __next_cart01_devat = JSON.parse(localStorage.getItem('__next_cart01_devat'))
+    if (__next_cart01_devat)
+      dispatch({ type: 'ADD_CART', payload: __next_cart01_devat })
+  }, [])
 
 
- return (
-  <DataContext.Provider value={{ state, dispatch }}>
-   {children}
-  </DataContext.Provider>
+  useEffect(() => {
+    localStorage.setItem('__next_cart01_devat', JSON.stringify(cart))
+  }, [cart])
 
- )
+
+  return (
+    <DataContext.Provider value={{ state, dispatch }}>
+      {children}
+    </DataContext.Provider>
+
+  )
 }
