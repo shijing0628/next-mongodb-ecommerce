@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: lato;
+  font-family: "Roboto";
   background: url("./images/bg3.png") no-repeat;
   background-size: cover;
 }
@@ -16,6 +16,10 @@ a {
   box-sizing: border-box;
 }
 
+h2 {
+  font-family: "lato";
+}
+
 img {
   object-fit: cover;
   object-position: 0 30%;
@@ -24,7 +28,9 @@ img {
   background: url("./images/nav.png");
   background-size: cover;
 }
-
+.navbar-brand:hover {
+  color: tomato;
+}
 /* ---------loading----------- */
 @import url("./loading.css");
 @import url("./product.css");

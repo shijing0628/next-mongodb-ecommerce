@@ -47,8 +47,8 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light navColor">
       <Link href="/" >
-        <a className="navbar-brand">
-          NEXT-JS
+        <a className="navbar-brand" style={{ fontFamily: 'Ruslan Display', fontSize: '40px', color: 'goldenrod' }}>
+          next-js
         </a>
       </Link>
 
